@@ -3,6 +3,7 @@ function insertionSort(arr) {
       let j = i - 1;
       let curr = arr[i];
   
+      console.log(arr)
         while( j >= 0 && arr[j] > curr){
           arr[j + 1] = arr[j]
           j--;
@@ -11,3 +12,5 @@ function insertionSort(arr) {
     }
     return arr;
   }
+
+  console.log(insertionSort([21,3,54,33,64,6]))
