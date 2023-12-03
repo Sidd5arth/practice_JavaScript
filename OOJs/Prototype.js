@@ -96,3 +96,32 @@ module.exports = Array.prototype.getSum;
 // BMW.brake();
 // Mercedes.accelerate();
 // Mercedes.brake();
+
+///////////////////////////////////////
+
+// USING CLASS
+
+class personClass {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    // instance methods
+    fullName() {
+        console.log(this.firstName + this.lastName);
+    }
+    mood() {
+        console.log("joyfull");
+    }
+    // static method
+    static hey(){
+        console.log("hello");
+        console.log(this);
+    }
+}
+const Aperson = new personClass("Yo", "Ho");
+Aperson.fullName();
+Aperson.mood();
+// Aperson.hey(); // will not work
+personClass.hey();
+

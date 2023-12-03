@@ -12,11 +12,9 @@ function getProduct(arr){
     for(let i = 1; i < n; i++){
         leftArr[i] = leftArr[i - 1] * arr[i - 1];
     }
-    console.log(leftArr);
     for(let i = n-2; i >= 0; i--){
         rightArr[i] = rightArr[i + 1] * arr[i + 1];
     }
-    console.log(rightArr);
     for(let i = 0; i < n; i++){
         resArr[i] = rightArr[i] * leftArr[i];
     }

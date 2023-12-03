@@ -26,9 +26,12 @@ const timeLimit = (fn, t) => {
         })
     }
 }
-const fn = async (n) => { await new Promise(res => setTimeout(res, 100)); return n * n; }
-console.log(timeLimit(fn, 100))
+const fn = async (n) => { await new Promise(res => setTimeout(res, 200)); return n * n; }
 
+const timeLimitedFn = timeLimit(fn, 100);
+timeLimitedFn(5)
+  .then(result => console.log(result))
+  .catch(error => console.log(error));
 
 
 

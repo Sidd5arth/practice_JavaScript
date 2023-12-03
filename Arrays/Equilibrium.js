@@ -7,7 +7,7 @@ function equilibriumPoint(a, n)
     }
     for(let j = 0; j < n; j++){
         sumRight -= a[j];
-        if(sumLeft === sumRight) return j + 1;
+        if(sumLeft === sumRight) return j+1;
         sumLeft += a[j];
     }
     return -1;

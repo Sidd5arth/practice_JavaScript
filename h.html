@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 50px); /* Adjust the number of columns as needed */
+      gap: 5px;
+    }
+
+    .light {
+      width: 50px;
+      height: 50px;
+      background-color: gray;
+      border: 1px solid black;
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <script src="Hoisting.js"></script>
+  <div class="grid" id="lightsGrid"></div>
+
+  <button id="deactivateButton">Deactivate Lights</button>
+
+  <script>
+    const grid = document.getElementById("lightsGrid");
+    const numCols = 5; 
+    const numRows = 5; 
+    const lights = [];
+
+    for (let i = 0; i < numCols * numRows; i++) {
+      const light = document.createElement("div");
+      light.classList.add("light");
+      light.textContent = i;
+      grid.appendChild(light);
+      
+      light.addEventListener("click", () => {
+      lights.push(light);
+      activateLight(light);
+    });
+    }
+
+
+    function activateLight(light) {
+      light.style.backgroundColor = "yellow";
+      console.log(lights)
+    }
+
+    function deactivateLight(light) {
+      light.style.backgroundColor = "gray";
+    }
+
+    const deactivateButton = document.getElementById("deactivateButton");
+
+    deactivateButton.addEventListener("click", () => {
+      let delay = 0;
+
+      while (lights.length > 0) {
+        const light = lights.pop();
+        setTimeout(() => deactivateLight(light), delay);
+        delay += 500;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -7,7 +7,8 @@ var flatten = function (arr) {
   var arrfull = [];
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
-      arrfull.push(...flatten(arr[i]));
+      const res  = flatten(arr[i])
+      arrfull.push(...res);
     } else {
       arrfull.push(arr[i]);
     }

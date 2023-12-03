@@ -10,7 +10,7 @@
 // }
 
 // // an object has a constructor property which points to itself
-// // which can be access via this inside the object
+// // which can be access via 'this' inside the object
 // console.log(Person.prototype.constructor);
 
 // new Person ('yoyo', 'oeoe');

@@ -1,3 +1,6 @@
+
+// wehave 1 & 0 replacing 0 to 1 to getuntile m amount of conversion is exhausted give the mac=x no. of consecutive ones that can be formed
+
 function traffic(n, m, vehicle) {
   let max = 0;
   for (let i = 0; i < n; i++) {

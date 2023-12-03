@@ -11,3 +11,5 @@ function* dateGenerator(startDate = new Date()) {
   for(let i = 0; i < 30; i++){
     console.log(dates.next().value.toDateString());
   }
+
+
