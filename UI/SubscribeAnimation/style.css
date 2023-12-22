@@ -1,0 +1,132 @@
+* {
+  font-family: "poppins";
+  letter-spacing: 0.5px;
+}
+body {
+  cursor: none;
+}
+
+#customCursor {
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  position: absolute;
+}
+button {
+  cursor: none;
+}
+#boxContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+.svg2 {
+  animation: zoomin 0.4s cubic-bezier(0.55, 0.11, 0.04, 0.97) forwards;
+}
+.rec2 {
+  transform: translateY(25%);
+  transition: 0.5s cubic-bezier(0.75, 0.12, 0.15, 0.93);
+}
+.face {
+  transform: translateY(0%) scale(1);
+}
+.faceof {
+  transform: scale(0) translateY(20%);
+}
+
+@keyframes zoomin {
+  0% {
+    transform: translateY(10%) scaleY(0%) scaleX(0%);
+  }
+  100% {
+    transform: translateY(0%) scaleY(100%) scaleX(100%);
+  }
+}
+.mailAnimate {
+  transform: translateY(0%) scaleY(100%) scaleX(100%);
+}
+.svg2Animate {
+  transform: translateY(25%);
+  transition: 0.35s cubic-bezier(0.75, 0.12, 0.15, 0.93);
+}
+.animate {
+  transition: 0.5s cubic-bezier(0.75, 0.12, 0.15, 0.93);
+}
+.animateContainer {
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.35s cubic-bezier(0.75, 0.12, 0.15, 0.93);
+}
+.btnStyle {
+  display: flex;
+  gap: 1em;
+}
+.btnStyleBack {
+  display: flex;
+  gap: 1em;
+}
+.btn {
+  width: 140px;
+  padding: 0.7em;
+  border: 3px solid rgb(73, 140, 248);
+  background-color: aliceblue;
+  border-radius: 1em;
+  font-size: 1em;
+  transition: 0.3s cubic-bezier(0.75, 0.12, 0.15, 0.93);
+}
+.btn:hover {
+  background-color: #addeff;
+}
+.btn1 {
+  background-color: #addeff;
+}
+.container {
+  border-radius: 2em;
+  padding: 4em;
+  width: 580px;
+  height: 580px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 36px 99px -22px rgba(65, 144, 223, 0.265);
+}
+.container2 {
+  border-radius: 2em;
+  padding: 4em;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 36px 99px -22px rgba(65, 144, 223, 0.265);
+}
+.pStyle {
+  text-align: center;
+}
+.pStyle2 {
+  text-align: center;
+}
+.pref {
+  color: #1c77e1;
+}
+.pref:hover {
+  color: #e11c64;
+}
+.hide {
+  display: none;
+}
+.dot {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
