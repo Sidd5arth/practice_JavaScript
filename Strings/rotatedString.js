@@ -9,20 +9,19 @@
 // }
 
 // const str = "abcde";
-// const goal = "cdeab"; 
+const goal = "cdeab";
 // console.log(rotated(str, goal));
 
-
-var restoreString = function(s, indices) {
-    function swap(x, y){
-        let temp = y;
-        y = x;
-        x = temp;
-    }
-    for(let i = 0; i < Math.floor((indices.length-1)/2); i++){
-        swap(s[i], s[indices[i]]);
-    }
-    return s;
+var restoreString = function (s, indices) {
+  function swap(x, y) {
+    let temp = y;
+    y = x;
+    x = temp;
+  }
+  for (let i = 0; i < Math.floor((indices.length - 1) / 2); i++) {
+    swap(s[i], s[indices[i]]);
+  }
+  return s;
 };
 
 console.log(restoreString("codeleet", goal));

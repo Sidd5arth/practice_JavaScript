@@ -1,14 +1,14 @@
 // // sum of all arr element;
 
-// Array.prototype.myReduce = function (cb, initialValue) {
-//   let result = initialValue;
+Array.prototype.myReduce = function (cb, initialValue) {
+  let result = initialValue;
 
-//   for (let i = 0; i < this.length; i++) {
-//     // if it has initial value assign it lese assign the arr[0] while iterating
-//     result = result ? cb(result, this[i], i, this) : this[i];
-//   }
-//   return result;
-// };
+  for (let i = 0; i < this.length; i++) {
+    // if it has initial value assign it lese assign the arr[0] while iterating
+    result = result ? cb(result, this[i], i, this) : this[i];
+  }
+  return result;
+};
 
 // function reducefun(arr) {
 //   const result = arr.myReduce((acc, curr, i, arr) => {
@@ -35,17 +35,17 @@ let students = [
 ];
 
 const result = students.reduce((acc, curr) => {
-    let currMark = curr.marks;
-    console.log(currMark)
-    if(currMark < 60){
-        currMark += 20;
-        if(currMark > 60){
-            acc += currMark;
-        }
-    }else{
-        acc += currMark;
+  let currMark = curr.marks;
+  console.log(currMark);
+  if (currMark < 60) {
+    currMark += 20;
+    if (currMark > 60) {
+      acc += currMark;
     }
-    return acc;
-},0);
+  } else {
+    acc += currMark;
+  }
+  return acc;
+}, 0);
 
-  console.log(result)
+console.log(result);
